@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Create Event" icon-name="custom:custom63">
+      <div class="slds-var-p-around_medium">
+        <lightning-input label="Event Name" value={eventName} onchange={handleInputChange} data-id="eventName"></lightning-input>
+        <lightning-input label="Event Date" type="date" value={eventDate} onchange={handleInputChange} data-id="eventDate"></lightning-input>
+        <lightning-input label="Location" value={eventLocation} onchange={handleInputChange} data-id="eventLocation"></lightning-input>
+        <lightning-input label="Maximum Capacity" type="number" value={eventCapacity} onchange={handleInputChange} data-id="eventCapacity"></lightning-input>
+        <lightning-button label="Create Event" onclick={createEvent} variant="brand"></lightning-button>
+      </div>
+    </lightning-card>
+  </template>

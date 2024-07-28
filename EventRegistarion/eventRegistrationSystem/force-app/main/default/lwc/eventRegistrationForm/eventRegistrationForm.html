@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Register for Event" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                name="events"
+                label="Select Event"
+                value={selectedEvent}
+                options={events}
+                placeholder="Select an event"
+                onchange={handleEventChange}>
+            </lightning-combobox>
+            <lightning-input
+                name="participantName"
+                label="Participant Name"
+                value={participantName}
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-input
+                name="email"
+                label="Email"
+                type="email"
+                value={email}
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-button
+                label="Register"
+                onclick={register}
+                class="slds-var-m-top_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
